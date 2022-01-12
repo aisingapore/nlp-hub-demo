@@ -52,7 +52,7 @@ interface DemoGroup {
 const sgnlpConversationalToolsDemos = [
   EmotionEntailmentDemo,
   CasualSpanExtractionDemo,
-  // IdentifyFollowUpQuestionDemo,
+  IdentifyFollowUpQuestionDemo,
 ];
 const sgnlpGrammarCorrectionDemos = [CrossSentenceGECDemo];
 const sgnlpKnowledgeMiningDemos = [RelationExtractionDemo];
@@ -60,7 +60,7 @@ const sgnlpSocialMediaAnalysisDemos = [RumourDetectionDemo];
 const sgnlpDiscourseParsingDemos = [DiscourseParsingDemo];
 const sgnlpSentimentAnalysisDemos = [
   AspectBasedSentimentAnalysisDemo,
-  // CrossLingualCrossDomainDemo
+  CrossLingualCrossDomainDemo
 ];
 
 export const sgnlpGroups: DemoGroup[] = [
