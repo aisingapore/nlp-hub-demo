@@ -8,6 +8,7 @@ import {
   TwitterOutlined,
   ScissorOutlined,
   SmileOutlined,
+  SolutionOutlined
 } from "@ant-design/icons";
 
 import { ModelConfig } from "./models";
@@ -30,6 +31,7 @@ import POSTaggerDemo from "./seacorenlp/pos-tagger/POSTaggerDemo";
 import NERTaggerDemo from "./seacorenlp/ner-tagger/NERTaggerDemo";
 import ConstituencyParserDemo from "./seacorenlp/const-parser/ConstituencyParserDemo";
 import DependencyParserDemo from "./seacorenlp/dep-parser/DependencyParserDemo";
+import CoreferenceResolutionDemo from "./seacorenlp/coref-resolver/CoreferenceResolutionDemo";
 
 export interface DemoConfig {
   taskId: string;
@@ -102,6 +104,7 @@ export const sgnlpDemos = [].concat.apply([], sgnlpNestedDemos);
 const seaSegmentationDemos = [TokenizerDemo];
 const seaTaggingDemos = [POSTaggerDemo, NERTaggerDemo];
 const seaParsingDemos = [ConstituencyParserDemo, DependencyParserDemo];
+const seaSemanticAnalysisDemos = [CoreferenceResolutionDemo];
 
 const seacorenlpGroups: DemoGroup[] = [
   {
@@ -118,6 +121,11 @@ const seacorenlpGroups: DemoGroup[] = [
     label: "Syntactic Parsing",
     icon: ApartmentOutlined,
     demos: seaParsingDemos,
+  },
+  {
+    label: "Semantic Analysis",
+    icon: SolutionOutlined,
+    demos: seaSemanticAnalysisDemos,
   },
 ];
 
