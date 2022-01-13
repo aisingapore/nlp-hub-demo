@@ -3,7 +3,7 @@ import { ModelConfig } from "../../models";
 
 const models: ModelConfig[] = [
   {
-    id: "id-sea",
+    id: "id-indolembert",
     desc: "IndoLEM IndoBERT Base Embeddings + c2f-coref architecture (Trained on SEACoreNLP data)",
     displayName: "Indonesian - SEACoreNLP",
   },
