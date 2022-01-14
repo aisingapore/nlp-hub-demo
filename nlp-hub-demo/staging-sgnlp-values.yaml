@@ -113,3 +113,14 @@ models:
       requests:
         memory: "4Gi"
         cpu: "500m"
+  senticGcn:
+    name: sentic-gcn
+    port: 8000
+    path: /api/aspect-based-sentiment-analysis/sentic-gcn/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: registry.aisingapore.net/sg-nlp/sentic-gcn:latest
+    resources:
+      requests:
+        memory: "2.5Gi"
+        cpu: "500m"
