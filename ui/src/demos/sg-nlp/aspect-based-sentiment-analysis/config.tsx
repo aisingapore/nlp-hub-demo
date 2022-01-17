@@ -4,7 +4,9 @@ import { ModelConfig } from "../../models";
 const models: ModelConfig[] = [
   {
     id: "asgcn",
-    desc: "Placeholder description",
+    desc:
+      "This is a neural network that utilises LSTM and GCN to detect the sentiment polarities of different aspects in the same sentence. " +
+      "The models used corresponds to the associated models described in the paper.",
     displayName: "ASGCN",
     usage: {
       fromBackend: true,
