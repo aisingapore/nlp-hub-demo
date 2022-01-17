@@ -3,11 +3,11 @@ import { ModelConfig } from "../../models";
 
 const models: ModelConfig[] = [
   {
-    id: "asgcn",
+    id: "sentic-gcn",
     desc:
       "This is a neural network that utilises LSTM and GCN to detect the sentiment polarities of different aspects in the same sentence. " +
       "The models used corresponds to the associated models described in the paper.",
-    displayName: "ASGCN",
+    displayName: "Sentic GCN",
     usage: {
       fromBackend: true,
     },
