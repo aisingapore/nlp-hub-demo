@@ -2,7 +2,7 @@ const examples: Record<string, any>[] = [
     {
       aspects: ["service", "decor"],
       sentence: "Everything is always cooked to perfection , the service is excellent, the decor cool and understated.",
-      display: "everything is always cooked to perfection ..."
+      display: "Everything is always cooked to perfection ..."
     },
     {
       aspects: ["food", "portions"],
@@ -10,9 +10,9 @@ const examples: Record<string, any>[] = [
       display: "The food was lousy - too sweet or too salty ..."
     },
     {
-      aspects: ["service"],
-      sentence: "To sum it up : service varies from good to mediorce , depending on which waiter you get ; generally it is just average ok .",
-      display: "To sum it up : service varies from good to mediorce ..."
+      aspects: ["Bagels"],
+      sentence: "Bagels are ok , but be sure not to make any special requests !",
+      display: "Bagels are ok , but be sure not to make any special requests !"
     },
   ];
   
