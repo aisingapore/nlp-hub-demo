@@ -57,7 +57,7 @@ const Output = (props: any) => {
   return (
     <>
       <h2>Aspect sentiment polarity</h2>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
         {sentence.map((token: string, index: number) => {
           if (aspects.includes(index)) {
             const aspectIndex = aspects.indexOf(index);

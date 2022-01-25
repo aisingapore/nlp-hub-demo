@@ -523,7 +523,7 @@ export default function () {
         );
       });
       // Aspect based sentiment analysis
-      this.post("/api/aspect-based-sentiment-analysis/asgcn/predict", () => {
+      this.post("/api/aspect-based-sentiment-analysis/sentic-gcn/predict", () => {
         return new Response(
           200,
           {},
@@ -545,6 +545,13 @@ export default function () {
               "the",
               "soup",
               "!",
+              "Nice",
+              "place",
+              "to",
+              "chill",
+              "and",
+              "hangout",
+              "."
             ],
             aspects: [0, 4, 14],
             labels: [1, -1, 1],
