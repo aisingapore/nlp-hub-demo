@@ -8,7 +8,7 @@ import {
   TwitterOutlined,
   ScissorOutlined,
   SmileOutlined,
-  SolutionOutlined
+  SolutionOutlined,
 } from "@ant-design/icons";
 
 import { ModelConfig } from "./models";
@@ -24,6 +24,7 @@ import DiscourseParsingDemo from "./sg-nlp/discourse-parsing/DiscourseParsingDem
 import CrossLingualCrossDomainDemo from "./sg-nlp/cross-lingual-cross-domain/CrossLingualCrossDomainDemo";
 import IdentifyFollowUpQuestionDemo from "./sg-nlp/identify-follow-up-question/IdentifyFollowUpQuestionDemo";
 import AspectBasedSentimentAnalysisDemo from "./sg-nlp/aspect-based-sentiment-analysis/AspectBasedSentimentAnalysisDemo";
+import RvStanceDetectionDemo from "./sg-nlp/rv-stance-detection/RvStanceDetectionDemo";
 
 // SEACoreNLP Demos
 import TokenizerDemo from "./seacorenlp/tokenizer/TokenizerDemo";
@@ -58,11 +59,14 @@ const sgnlpConversationalToolsDemos = [
 ];
 const sgnlpGrammarCorrectionDemos = [CrossSentenceGECDemo];
 const sgnlpKnowledgeMiningDemos = [RelationExtractionDemo];
-const sgnlpSocialMediaAnalysisDemos = [RumourDetectionDemo];
+const sgnlpSocialMediaAnalysisDemos = [
+  RumourDetectionDemo,
+  RvStanceDetectionDemo,
+];
 const sgnlpDiscourseParsingDemos = [DiscourseParsingDemo];
 const sgnlpSentimentAnalysisDemos = [
   AspectBasedSentimentAnalysisDemo,
-  CrossLingualCrossDomainDemo
+  CrossLingualCrossDomainDemo,
 ];
 
 export const sgnlpGroups: DemoGroup[] = [
