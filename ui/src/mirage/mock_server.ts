@@ -570,7 +570,15 @@ export default function () {
           return new Response(
             200,
             {},
-            { predicted_y: "a true rumour", predicted_prob: 99.8 }
+            {
+              rumor_label: "true rumour",
+              stance_label: ["deny", "support"],
+              text: [
+                "There was a bomb at Marina Bay Sands!",
+                "That is not true, I was there.",
+                "Oh, I heard some news about that too!",
+              ],
+            }
           );
         }
       );
