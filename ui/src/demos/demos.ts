@@ -37,7 +37,7 @@ import CoreferenceResolutionDemo from "./seacorenlp/coref-resolver/CoreferenceRe
 export interface DemoConfig {
   taskId: string;
   title: string;
-  desc: string;
+  desc: string | JSX.Element;
   models: ModelConfig[];
 }
 

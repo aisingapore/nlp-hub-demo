@@ -1,58 +1,66 @@
 const examples: Record<string, any>[] = [
+  {
+      display: "Is it true? Prince rumoured to be performing surprise show in Toronto",
+      tweets: [
+        {
+          key: 0,
+          tweet: "@LisaLaFlammeCTV hope not",
+        },
+        {
+          key: 1,
+          tweet: "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
+        },
+        {
+          key: 2,
+          tweet: "@LisaLaFlammeCTV Do you mean the artist formerly known as \"Strange Symbol\"?",
+        },
+        {
+          key: 3,
+          tweet: "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
+        },
+        {
+          key: 4,
+          tweet: "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",
+        },
+      ],
+    },
     {
-        display: "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting...",
-        tweets: [
-          {
-            key: 0,
-            tweet: "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/lXFiYaVImZ",
-          },
-          {
-            key: 1,
-            tweet: "\u201c@PzFeed: BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/m0ecoYzyn5\u201d FFS",
-          },
-          {
-            key: 2,
-            tweet: "BREAKING: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/H2H6Lg13mh\n\nvia @PzFeed",
-          },
-        ],
-      },
-      {
-        display: "Update - French interior ministry says...",
-        tweets: [
-          {
-            key: 0,
-            tweet: "Update - French interior ministry says incident which led to evacuation of Trocadero near the Eiffel Tower in Paris was a false alarm",
-          },
-          {
-            key: 1,
-            tweet: "@SkyNewsBreak At least theyre alert.",
-          },
-          {
-            key: 2,
-            tweet: "@Golden_Gaytime @SkyNewsBreak thank God. This is already horrific enough.",
-          },
-          {
-            key: 3,
-            tweet: "@SkyNewsBreak @LTCPeterLerner Have you thought of confirming information before posting it on Twitter? Might be helpful.",
-          },
-          {
-            key: 4,
-            tweet: "\u201c@SkyNewsBreak: French interior ministry says incident which led to evacuation of Trocadero in Paris was false alarm\u201d @kristaalyce",
-          },
-          {
-            key: 5,
-            tweet: "@theloon @SkyNewsBreak @LTCPeterLerner  I am not posting any info from now on which is not confirmed. Creates confusion.",
-          },
-          {
-            key: 6,
-            tweet: "@collywobbles54 @SkyNewsBreak @LTCPeterLerner - Also creates unnecessary anxiety/fear for anyone with relatives/friends in France.",
-          },
-          {
-            key: 7,
-            tweet: "@theloon @SkyNewsBreak @LTCPeterLerner  of course.",
-          },
-        ],
-      },
-  ];
+      display: "Name of #Ferguson cop is expected to be released by 9 ET, police chief says:  (J.B. Forbes, AP)",
+      tweets: [
+        {
+          key: 0,
+          tweet: "@USATODAY Good Ol' Boy system at work just like 1865.",
+        },
+        {
+          key: 1,
+          tweet: "Name of #Ferguson cop is expected to be released by 9 ET, police chief says:  (J.B. Forbes, AP)",
+        },
+        {
+          key: 2,
+          tweet: "@USATODAY New police chief?",
+        },
+        {
+          key: 3,
+          tweet: "@USATODAY The #Ferguson police department is incompetent. Why would you give 12 hours notice of releasing the officers name? Builds hype",
+        },
+        {
+          key: 4,
+          tweet: "@USATODAY BTW the interview the #Ferguson Police Chief conducted yesterday was the worst interview I have ever seen",
+        },
+        {
+          key: 5,
+          tweet: "RT @USATODAY: Name of #Ferguson cop is expected to be released by 9 ET  (J.B. Forbes, AP)",
+        },
+        {
+          key: 6,
+          tweet: "@USATODAY Get ready to tweet the address #SpikeLee and other vigilantes.",
+        },
+        {
+          key: 7,
+          tweet: "@USATODAY  like holding back zombies",
+        }
+      ],
+    },
+];
 
-  export default examples;
+export default examples;
