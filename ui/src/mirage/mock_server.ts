@@ -572,11 +572,12 @@ export default function () {
             {},
             {
               rumor_label: "true rumour",
-              stance_label: ["deny", "support"],
+              stance_label: ["deny", "support", "comment"],
               text: [
-                "There was a bomb at Marina Bay Sands!",
-                "That is not true, I was there.",
-                "Oh, I heard some news about that too!",
+                  "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting...",
+                  "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/lXFiYaVImZ",
+                  "\u201c@PzFeed: BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/m0ecoYzyn5\u201d FFS",
+                  "BREAKING: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/H2H6Lg13mh\n\nvia @PzFeed",
               ],
             }
           );
