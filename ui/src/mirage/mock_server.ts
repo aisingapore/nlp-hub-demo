@@ -572,12 +572,14 @@ export default function () {
             {},
             {
               rumor_label: "true rumour",
-              stance_label: ["deny", "support", "comment"],
+              stance_label: ["deny", "support", "Query", "comment", "support"],
               text: [
-                  "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting...",
-                  "BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/lXFiYaVImZ",
-                  "\u201c@PzFeed: BREAKING NEWS: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/m0ecoYzyn5\u201d FFS",
-                  "BREAKING: Ottawa police confirm at least 3 separate shooting sites and multiple suspects -  http://t.co/H2H6Lg13mh\n\nvia @PzFeed",
+                "Is it true? Prince rumoured to be performing surprise show in Toronto",
+                "@LisaLaFlammeCTV hope not",
+                "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
+                "@LisaLaFlammeCTV Do you mean the artist formerly known as \"Strange Symbol\"?",
+                "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
+                "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",  
               ],
             }
           );
