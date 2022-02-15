@@ -124,3 +124,14 @@ models:
       requests:
         memory: "2.5Gi"
         cpu: "500m"
+  dualBert:
+    name: dual-bert
+    port: 8000
+    path: /api/rv-stance-detection/dual-bert/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: registry.aisingapore.net/sg-nlp/dual-bert:latest
+    resources:
+      requests:
+        memory: "10Gi"
+        cpu: "500m"

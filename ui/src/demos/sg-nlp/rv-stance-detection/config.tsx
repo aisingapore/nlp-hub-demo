@@ -4,7 +4,7 @@ import { ModelConfig } from "../../models";
 
 const models: ModelConfig[] = [
   {
-    id: "coupled-hierarchical-transformer",
+    id: "dual-bert",
     desc: "This model is based on the Coupled Hierarchical Transformer architecture introduced in the accompanying paper. \
       The model assesses the first post and following replies contents of the entire conversation thread.",
     displayName: "Coupled Hierarchical Transformer",

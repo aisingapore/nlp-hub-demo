@@ -5,24 +5,24 @@ import TableInput, {
 
 const tableInputProps: TableInputProps = {
   label: "Discussion thread",
-  columnInfo: [{ title: "Tweet", dataIndex: "tweet" }],
+  columnInfo: [{ title: "Post", dataIndex: "post" }],
   maxRows: 10,
 };
 
 const inputFields: InputField[] = [
   {
-    id: "tweets",
+    id: "posts",
     component: TableInput,
     componentProps: tableInputProps,
   },
 ];
 
 export const formatPayload = (inputFields: Record<string, any>) => {
-  let tweets = inputFields.tweets.map((row: { key: number; tweet: string }) => {
-    return row.tweet;
+  let posts = inputFields.posts.map((row: { key: number; post: string }) => {
+    return row.post;
   });
 
-  return { tweets: tweets };
+  return { posts: posts };
 };
 
 export default inputFields;
