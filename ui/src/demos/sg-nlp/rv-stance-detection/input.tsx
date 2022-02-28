@@ -3,26 +3,43 @@ import TableInput, {
   TableInputProps,
 } from "../../../components/input/TableInput";
 
-const tableInputProps: TableInputProps = {
+const claimInputProps: TableInputProps = {
   label: "Discussion thread",
-  columnInfo: [{ title: "Post", dataIndex: "post" }],
+  columnInfo: [{ title: "Claim", dataIndex: "claim" }],
+  maxRows: 1,
+};
+
+const commentInputProps: TableInputProps = {
+  columnInfo: [{ title: "Comments/Replies", dataIndex: "comment" }],
   maxRows: 10,
 };
 
 const inputFields: InputField[] = [
   {
-    id: "posts",
+    id: "claims",
     component: TableInput,
-    componentProps: tableInputProps,
+    componentProps: claimInputProps,
+  },
+  {
+    id: "comments",
+    component: TableInput,
+    componentProps: commentInputProps,
   },
 ];
 
 export const formatPayload = (inputFields: Record<string, any>) => {
-  let posts = inputFields.posts.map((row: { key: number; post: string }) => {
-    return row.post;
-  });
+  const claims = inputFields.claims.map(
+    (row: { key: number; claim: string }) => {
+      return row.claim;
+    }
+  );
+  const comments = inputFields.comments.map(
+    (row: { key: number; comment: string }) => {
+      return row.comment;
+    }
+  );
 
-  return { posts: posts };
+  return { posts: claims.concat(comments) };
 };
 
 export default inputFields;
