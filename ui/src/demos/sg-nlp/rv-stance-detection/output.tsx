@@ -21,16 +21,17 @@ const Indent: React.FC = ({ children }) => {
 };
 
 const Output = ({ responseData }: OutputProps) => {
-  const dataSource = responseData.text.map((t, i) => {
+  const comments = responseData.text.slice(1).map((t, i) => {
     return {
       key: i,
-      text: i > 0 ? <Indent>{t}</Indent> : t,
-      stance: i > 0 ? responseData.stance_labels[i - 1] : "",
+      text: <Indent>{t}</Indent>,
+      stance: responseData.stance_labels[i],
     };
   });
-  const columns = [
+
+  const commentsColumns = [
     {
-      title: <b>Text</b>,
+      title: <b>Comments/Replies</b>,
       dataIndex: "text",
       key: "text",
     },
@@ -41,9 +42,29 @@ const Output = ({ responseData }: OutputProps) => {
     },
   ];
 
+  const claim = [
+    {
+      key: 0,
+      claim: responseData.text[0],
+    },
+  ];
+
+  const claimColumns = [
+    {
+      title: <b>Claim</b>,
+      dataIndex: "claim",
+      key: "claim",
+    },
+  ];
+
   return (
     <div>
-      <Table dataSource={dataSource} columns={columns} pagination={false} />
+      <Table dataSource={claim} columns={claimColumns} pagination={false} />
+      <Table
+        dataSource={comments}
+        columns={commentsColumns}
+        pagination={false}
+      />
 
       <div style={{ paddingTop: "12px" }}>
         The model thinks that this conversation thread is a{" "}
