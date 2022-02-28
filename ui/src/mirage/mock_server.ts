@@ -565,7 +565,7 @@ export default function () {
       );
       // Rv + Stance detection
       this.post(
-        "/api/rv-stance-detection/coupled-hierarchical-transformer/predict",
+        "/api/rv-stance-detection/dual-bert/predict",
         () => {
           return new Response(
             200,
