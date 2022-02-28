@@ -571,8 +571,8 @@ export default function () {
             200,
             {},
             {
-              rumor_label: "true rumour",
-              stance_label: ["Deny", "Support", "Query", "Comment", "Support"],
+              rumor_labels: "true rumour",
+              stance_labels: ["Deny", "Support", "Query", "Comment", "Support"],
               text: [
                 "Is it true? Prince rumoured to be performing surprise show in Toronto",
                 "@LisaLaFlammeCTV hope not",
