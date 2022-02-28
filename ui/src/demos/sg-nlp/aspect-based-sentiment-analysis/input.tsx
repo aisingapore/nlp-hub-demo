@@ -21,6 +21,14 @@ export const validateInputs = (inputFields: Record<string, any>) => {
   const aspects = inputFields["aspects"];
   const sentence = inputFields["sentence"];
 
+  aspects.map((aspect: string) => {
+    if (aspect.split(" ").length > 1) {
+      errors["aspects"] =
+        "Currently this demo only supports single-word aspects. " +
+        "<br>Using the model from the python package allows multiple-word aspects.";
+    }
+  })
+
   const missingAspects = aspects
     .map((aspect: string) => {
       if (!sentence.includes(aspect)) {
