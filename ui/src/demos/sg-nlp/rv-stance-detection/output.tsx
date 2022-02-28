@@ -11,6 +11,10 @@ interface OutputProps {
   };
 }
 
+interface ColoredStanceProps {
+  stance: string;
+}
+
 const Indent: React.FC = ({ children }) => {
   return (
     <div>
@@ -20,12 +24,25 @@ const Indent: React.FC = ({ children }) => {
   );
 };
 
+const ColoredStance = ({ stance }: ColoredStanceProps) => {
+  const colorMap: Record<string, string> = {
+    Deny: "red",
+    Support: "green",
+    Comment: "blue",
+    Query: "purple",
+  };
+
+  const color = colorMap[stance] || "black";
+
+  return <div style={{ color: color, fontWeight: "bold" }}>{stance}</div>;
+};
+
 const Output = ({ responseData }: OutputProps) => {
   const comments = responseData.text.slice(1).map((t, i) => {
     return {
       key: i,
       text: <Indent>{t}</Indent>,
-      stance: responseData.stance_labels[i],
+      stance: <ColoredStance stance={responseData.stance_labels[i]} />,
     };
   });
 
