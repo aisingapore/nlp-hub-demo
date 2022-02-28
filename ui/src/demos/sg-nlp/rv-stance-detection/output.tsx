@@ -6,8 +6,8 @@ import { BsArrowReturnRight } from "react-icons/bs";
 interface OutputProps {
   responseData: {
     text: string[];
-    rumor_label: string;
-    stance_label: string[];
+    rumor_labels: string[];
+    stance_labels: string[];
   };
 }
 
@@ -25,7 +25,7 @@ const Output = ({ responseData }: OutputProps) => {
     return {
       key: i,
       text: i > 0 ? <Indent>{t}</Indent> : t,
-      stance: i > 0 ? responseData.stance_label[i - 1] : "",
+      stance: i > 0 ? responseData.stance_labels[i - 1] : "",
     };
   });
   const columns = [
@@ -47,7 +47,7 @@ const Output = ({ responseData }: OutputProps) => {
 
       <div style={{ paddingTop: "12px" }}>
         The model thinks that this conversation thread is a{" "}
-        <b>{responseData.rumor_label}</b>.
+        <b>{responseData.rumor_labels}</b>.
       </div>
     </div>
   );
