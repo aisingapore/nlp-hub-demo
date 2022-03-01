@@ -557,7 +557,7 @@ export default function () {
                 "hangout",
                 ".",
               ],
-              aspects: [0, 4, 14],
+              aspects: [[0], [4], [14]],
               labels: [1, -1, 1],
             }
           );
