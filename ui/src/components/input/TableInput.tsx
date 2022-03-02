@@ -102,8 +102,7 @@ const TableInput = ({
     columns.unshift({
       title: "Person",
       dataIndex: "person",
-      render: (_: any, __: any, index: number) =>
-        <SpeakerName index={index}/>
+      render: (_: any, __: any, index: number) => <SpeakerName index={index} />,
     });
   }
   // Add delete button column
@@ -122,20 +121,24 @@ const TableInput = ({
 
   return (
     <InputFieldDiv>
-      <Title level={5}>
-        {getPropValue(componentProps, "label", "Table Input")}
-      </Title>
+      {componentProps.label && (
+        <Title level={5}>
+          {getPropValue(componentProps, "label", "Table Input")}
+        </Title>
+      )}
       <StyledTable dataSource={value} columns={columns} pagination={false} />
-      <Button
-        onClick={handleAdd}
-        disabled={
-          value && componentProps.maxRows
-            ? value.length >= componentProps.maxRows
-            : false
-        }
-      >
-        Add a row
-      </Button>
+      {componentProps.maxRows > 1 && (
+        <Button
+          onClick={handleAdd}
+          disabled={
+            value && componentProps.maxRows
+              ? value.length >= componentProps.maxRows
+              : false
+          }
+        >
+          Add a row
+        </Button>
+      )}
     </InputFieldDiv>
   );
 };
