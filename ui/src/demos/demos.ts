@@ -61,7 +61,7 @@ const sgnlpGrammarCorrectionDemos = [CrossSentenceGECDemo];
 const sgnlpKnowledgeMiningDemos = [RelationExtractionDemo];
 const sgnlpSocialMediaAnalysisDemos = [
   RumourDetectionDemo,
-  RvStanceDetectionDemo,
+  // RvStanceDetectionDemo,
 ];
 const sgnlpDiscourseParsingDemos = [DiscourseParsingDemo];
 const sgnlpSentimentAnalysisDemos = [
