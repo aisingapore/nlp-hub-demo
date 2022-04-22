@@ -55,10 +55,8 @@ build_production_sgnlp:
   needs: ["deploy_staging_sgnlp"]
   when: manual
   only:
-    refs:
-      - main
-    tags:
-      - SGnlp_v0.3.0
+    - main
+    - SGnlp_v0.3.0
   script:
     - echo 'Building SG-NLP UI for production'
     - cat $GCR_KEYFILE | docker login -u _json_key --password-stdin https://asia.gcr.io
@@ -85,10 +83,8 @@ deploy_production_sgnlp:
   needs: ["build_production_sgnlp"]
   when: manual
   only:
-    refs:
-      - main
-    tags:
-      - SGnlp_v0.3.0
+    - main
+    - SGnlp_v0.3.0
   script:
     - echo 'Deploying production SG-NLP UI helm chart'
     - export KUBECONFIG=$PROD_GKE_KUBE_CONFIG_SGNLP
