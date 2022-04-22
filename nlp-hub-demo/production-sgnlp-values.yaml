@@ -91,3 +91,36 @@ models:
         memory: "2Gi"
         cpu: "500m"
     healthcheck: true
+  lif3wayAp:
+    name: lif-3way-ap
+    port: 8000
+    path: /api/identify-follow-up-question/lif-3way-ap/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/sgnlp/lif-3way-ap:latest
+    resources:
+      requests:
+        memory: "500Mi"
+        cpu: "250m"
+  ufd:
+    name: ufd
+    port: 8000
+    path: /api/cross-lingual-cross-domain/ufd/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/sgnlp/ufd:latest
+    resources:
+      requests:
+        memory: "4Gi"
+        cpu: "500m"
+  senticGcn:
+    name: sentic-gcn
+    port: 8000
+    path: /api/aspect-based-sentiment-analysis/sentic-gcn/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/sgnlp/sentic-gcn:latest
+    resources:
+      requests:
+        memory: "2.5Gi"
+        cpu: "500m"
