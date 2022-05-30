@@ -75,12 +75,22 @@ const HomeNavLink = styled(NavLink)`
   align-items: center;
 `;
 
+const HeaderButtonsContainer = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 const HeaderButton = styled(Button)`
-  background: transparent;
+  background: ${COLORS.BLACK};
   color: ${COLORS.LIGHTGREY};
   border: none;
   font-weight: bold;
   font-size: 16px;
+  height: 100%;
+  :hover {
+    background-color: ${COLORS.FADEBLACK};
+  }
 `;
 
 const SgnlpBanner = () => (
@@ -123,16 +133,16 @@ const DemoHeader = () => {
         <HomeNavLink to="/">
           <Logo />
         </HomeNavLink>
-        <div>
-          <HeaderButton ghost>
+        <HeaderButtonsContainer>
+          <HeaderButton>
             <a href="/docs" target="_blank" rel="noopener">
               Docs
             </a>
           </HeaderButton>
           <Dropdown overlay={dropdownMenu} trigger={["click"]}>
-            <HeaderButton ghost>Community</HeaderButton>
+            <HeaderButton>Community</HeaderButton>
           </Dropdown>
-        </div>
+        </HeaderButtonsContainer>
       </StyledHeader>
       <Banner />
     </>

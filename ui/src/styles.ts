@@ -14,6 +14,7 @@ export const COLORS = {
     LIGHT: "#FDF8F8",
   },
   BLACK: "#383838",
+  FADEBLACK: "#484848",
   LIGHTGREY: "#EEEEEE",
   BACKGROUND: "#F9F9F9",
 };
