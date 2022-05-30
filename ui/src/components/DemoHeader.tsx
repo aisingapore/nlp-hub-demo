@@ -88,8 +88,9 @@ const HeaderButton = styled(Button)`
   font-weight: bold;
   font-size: 16px;
   height: 100%;
-  :hover {
-    background-color: ${COLORS.FADEBLACK};
+  :hover,
+  :focus {
+    background: ${COLORS.FADEBLACK};
   }
 `;
 
@@ -142,6 +143,9 @@ const DemoHeader = () => {
           <Dropdown overlay={dropdownMenu} trigger={["click"]}>
             <HeaderButton>Community</HeaderButton>
           </Dropdown>
+          <HeaderButton>
+            <NavLink to="/contributing">Contributing</NavLink>
+          </HeaderButton>
         </HeaderButtonsContainer>
       </StyledHeader>
       <Banner />

@@ -9,9 +9,10 @@ import DemoHeader from "./components/DemoHeader";
 import SideMenu from "./components/SideMenu";
 import { Demo, demos } from "./demos/demos";
 import { COLORS } from "./styles";
-import { HomePage } from "./components/HomePage";
+import { HomePage } from "./pages/HomePage";
 import DrawerMenu from "./components/DrawerMenu";
 import MobileMessage from "./components/MobileMessage";
+import ContributingGuide from "./pages/ContributingGuide";
 
 export const App = () => (
   <React.Fragment>
@@ -61,6 +62,9 @@ const DemoLayout = () => {
           <ContentDiv>
             <Route exact path="/">
               <HomePage />
+            </Route>
+            <Route exact path="/contributing">
+              <ContributingGuide />
             </Route>
             {demos.map((demo: Demo) => (
               <Route path={"/" + demo.config.taskId} key={demo.config.taskId}>
