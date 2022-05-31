@@ -4,7 +4,7 @@ This repository contains the code for the NLP Hub's demo websites as well as Hel
 
 ## Demo sites
 
-[SG-NLP Demo](https://sgnlp.aisingapore.net/)
+[SGnlp Demo](https://sgnlp.aisingapore.net/)
 
 [SEACoreNLP Demo](https://seacorenlp.aisingapore.net/)
 

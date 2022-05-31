@@ -4,7 +4,7 @@ export default function () {
   createServer({
     routes() {
       /* =============
-         SG-NLP Models
+         SGnlp Models
          =============
 
          1. Relation Extraction

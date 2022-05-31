@@ -14,7 +14,7 @@ import {
 import { ModelConfig } from "./models";
 import { CONTENT_TYPE } from "../constants";
 
-// SG-NLP Demos
+// SGnlp Demos
 import RelationExtractionDemo from "./sg-nlp/relation-extraction/RelationExtractionDemo";
 import EmotionEntailmentDemo from "./sg-nlp/emotion-entailment/EmotionEntailmentDemo";
 import CasualSpanExtractionDemo from "./sg-nlp/causal-span-extraction/CausalSpanExtractionDemo";

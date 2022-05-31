@@ -27,10 +27,10 @@ const SEACoreNLPImage = styled.img.attrs({
 const sgnlpHomePage = () => {
   return (
     <Pane>
-      <Title>Welcome to the SG-NLP Demo page.</Title>
+      <Title>Welcome to the SGnlp Demo page!</Title>
       <SgnlpImage />
       <Paragraph>
-        SG-NLP is an initiative by AI Singapore's NLP Hub. We aim to bridge the
+        SGnlp is an initiative by AI Singapore's NLP Hub. We aim to bridge the
         gap between research and industry, promote translational research, and
         encourage adoption of NLP techniques in the industry.
       </Paragraph>
