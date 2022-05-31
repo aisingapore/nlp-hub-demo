@@ -4,20 +4,9 @@ import Title from "antd/lib/typography/Title";
 import Paragraph from "antd/lib/typography/Paragraph";
 
 import { CONTENT_TYPE } from "../constants";
-import { COLORS, PAGE_WIDTH } from "../styles";
 import sgnlpImage from "../assets/sgnlp_art.svg";
 import seacorenlpImage from "../assets/seacorenlp_art.svg";
-
-const MainPage = styled.div`
-  padding: 50px;
-  background-color: ${COLORS.BACKGROUND};
-  width: ${PAGE_WIDTH};
-  text-align: initial;
-
-  @media (max-width: 992px) {
-    width: 100%;
-  }
-`;
+import Pane from "../components/Pane";
 
 const SgnlpImage = styled.img.attrs({
   src: sgnlpImage,
@@ -37,7 +26,7 @@ const SEACoreNLPImage = styled.img.attrs({
 
 const sgnlpHomePage = () => {
   return (
-    <MainPage>
+    <Pane>
       <Title>Welcome to the SG-NLP Demo page.</Title>
       <SgnlpImage />
       <Paragraph>
@@ -75,13 +64,13 @@ const sgnlpHomePage = () => {
         </a>
         .
       </Paragraph>
-    </MainPage>
+    </Pane>
   );
 };
 
 const seacorenlpHomePage = () => {
   return (
-    <MainPage>
+    <Pane>
       <Title>Welcome to the SEACoreNLP Demo (Beta)!</Title>
       <SEACoreNLPImage />
       <Paragraph>
@@ -132,7 +121,7 @@ const seacorenlpHomePage = () => {
         </a>
         .
       </Paragraph>
-    </MainPage>
+    </Pane>
   );
 };
 

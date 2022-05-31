@@ -10,10 +10,11 @@ import DemoInput from "./input/DemoInput";
 import ModelSelect from "./ModelSelect";
 import InputField from "./input/InputField";
 import DemoOutput from "./output/DemoOutput";
-import { COLORS, PAGE_WIDTH } from "../styles";
+import { COLORS } from "../styles";
 import ModelCard from "./ModelCard";
 import ModelUsage from "./ModelUsage";
 import { CONTENT_TYPE } from "../constants";
+import Pane from "./Pane";
 
 interface DemoProps {
   config: DemoConfig;
@@ -23,17 +24,6 @@ interface DemoProps {
   formatPayload?: (inputFields: Record<string, any>) => Record<string, any>;
   validateInputs?: (inputFields: Record<string, any>) => Record<string, any>;
 }
-
-const Pane = styled.div`
-  padding: 50px;
-  background-color: ${COLORS.BACKGROUND};
-  width: ${PAGE_WIDTH};
-  text-align: initial;
-
-  @media (max-width: 992px) {
-    width: 100%;
-  }
-`;
 
 const TaskDescription = styled.div`
   background-color: ${COLORS.BACKGROUND};
