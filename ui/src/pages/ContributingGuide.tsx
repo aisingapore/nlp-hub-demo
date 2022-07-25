@@ -2,6 +2,7 @@ import * as React from "react";
 import Title from "antd/lib/typography/Title";
 import { Collapse } from "antd";
 
+import { CONTENT_TYPE } from "../constants";
 import Pane from "../components/Pane";
 
 const { Panel } = Collapse;
@@ -201,6 +202,9 @@ const content = [
 ];
 
 const ContributingGuide = () => {
+  if (CONTENT_TYPE === "SEACORENLP") {
+    return null;
+  }
   return (
     <Pane>
       <Title>Contributing Guide</Title>
