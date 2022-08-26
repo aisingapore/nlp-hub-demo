@@ -33,6 +33,7 @@ import NERTaggerDemo from "./seacorenlp/ner-tagger/NERTaggerDemo";
 import ConstituencyParserDemo from "./seacorenlp/const-parser/ConstituencyParserDemo";
 import DependencyParserDemo from "./seacorenlp/dep-parser/DependencyParserDemo";
 import CoreferenceResolutionDemo from "./seacorenlp/coref-resolver/CoreferenceResolutionDemo";
+import SemanticRoleLabelingDemo from "./seacorenlp/srl-parser/SemanticRoleLabelingDemo";
 
 export interface DemoConfig {
   taskId: string;
@@ -108,7 +109,7 @@ export const sgnlpDemos = [].concat.apply([], sgnlpNestedDemos);
 const seaSegmentationDemos = [TokenizerDemo];
 const seaTaggingDemos = [POSTaggerDemo, NERTaggerDemo];
 const seaParsingDemos = [ConstituencyParserDemo, DependencyParserDemo];
-const seaSemanticAnalysisDemos = [CoreferenceResolutionDemo];
+const seaSemanticAnalysisDemos = [CoreferenceResolutionDemo, SemanticRoleLabelingDemo];
 
 const seacorenlpGroups: DemoGroup[] = [
   {
