@@ -579,7 +579,7 @@ export default function () {
                 "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
                 "@LisaLaFlammeCTV Do you mean the artist formerly known as \"Strange Symbol\"?",
                 "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
-                "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",  
+                "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",
               ],
             }
           );
@@ -596,6 +596,7 @@ export default function () {
          4. Dependency Parser
          5. Constituency Parser
          6. Coreference Resolver
+         7. Semantic Role Labeler
 
          ------------------------ */
 
@@ -1436,6 +1437,73 @@ export default function () {
               [74, 79],
               [75, 75],
             ],
+          }
+        );
+      });
+      // Semantic Role Labeler
+      this.post("/api/sea-srl-parser/**", () => {
+        return new Response(
+          200,
+          {},
+          {
+            words: [
+              "Saya",
+              "pergi",
+              "ke",
+              "sekolah",
+              "dengan",
+              "cepat",
+              "dan",
+              "mereka",
+              "makan",
+              "nasi",
+              "dengan",
+              "sendok",
+              "dan",
+              "garpu"
+            ],
+            verbs: [
+              {
+                "description": "",
+                "tags": [
+                  "U-ARG1",
+                  "U-V",
+                  "B-ARG4",
+                  "L-ARG4",
+                  "B-ARGM-MNR",
+                  "L-ARGM-MNR",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O"
+                ],
+                "verb": "pergi"
+              },
+              {
+                "description": "",
+                "tags": [
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "O",
+                  "U-ARG0",
+                  "U-V",
+                  "U-ARG1",
+                  "B-ARGM-MNR",
+                  "I-ARGM-MNR",
+                  "I-ARGM-MNR",
+                  "L-ARGM-MNR"
+                ],
+                "verb": "makan"
+              }
+            ]
           }
         );
       });
