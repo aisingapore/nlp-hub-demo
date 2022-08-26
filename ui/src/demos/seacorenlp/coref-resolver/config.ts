@@ -4,7 +4,7 @@ import { ModelConfig } from "../../models";
 const models: ModelConfig[] = [
   {
     id: "id-xlmr",
-    desc: "IndoLEM XLM-RoBERTa Base Embeddings + c2f-coref architecture (Trained on COIN dataset)",
+    desc: "XLM-RoBERTa Base Embeddings + c2f-coref architecture (Trained on COIN dataset)",
     displayName: "Indonesian - SEACoreNLP",
   },
 ];
