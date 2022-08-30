@@ -25,6 +25,7 @@ import CrossLingualCrossDomainDemo from "./sg-nlp/cross-lingual-cross-domain/Cro
 import IdentifyFollowUpQuestionDemo from "./sg-nlp/identify-follow-up-question/IdentifyFollowUpQuestionDemo";
 import AspectBasedSentimentAnalysisDemo from "./sg-nlp/aspect-based-sentiment-analysis/AspectBasedSentimentAnalysisDemo";
 import RvStanceDetectionDemo from "./sg-nlp/rv-stance-detection/RvStanceDetectionDemo";
+import CoherenceModelingDemo from "./sg-nlp/coherence-modeling/CoherenceModelingDemo";
 
 // SEACoreNLP Demos
 import TokenizerDemo from "./seacorenlp/tokenizer/TokenizerDemo";
@@ -104,7 +105,8 @@ export const sgnlpGroups: DemoGroup[] = [
 ];
 
 const sgnlpNestedDemos = sgnlpGroups.map((group) => group["demos"]);
-export const sgnlpDemos = [].concat.apply([], sgnlpNestedDemos);
+const sgnlpDemos = [].concat.apply([], sgnlpNestedDemos);
+const sgnlpBetaDemos: Demo[] = [CoherenceModelingDemo];
 
 const seaSegmentationDemos = [TokenizerDemo];
 const seaTaggingDemos = [POSTaggerDemo, NERTaggerDemo];
@@ -135,11 +137,17 @@ const seacorenlpGroups: DemoGroup[] = [
 ];
 
 const seacorenlpNestedDemos = seacorenlpGroups.map((group) => group["demos"]);
-export const seacorenlpDemos = [].concat.apply([], seacorenlpNestedDemos);
+const seacorenlpDemos = [].concat.apply([], seacorenlpNestedDemos);
+const seacorenlpBetaDemos: Demo[] = []
 
 export const demos = {
   SGNLP: sgnlpDemos,
   SEACORENLP: seacorenlpDemos,
+}[CONTENT_TYPE];
+
+export const betaDemos = {
+  SGNLP: sgnlpBetaDemos,
+  SEACORENLP: seacorenlpBetaDemos,
 }[CONTENT_TYPE];
 
 export const demoGroups = {

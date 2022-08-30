@@ -18,6 +18,7 @@ export default function () {
          9. Discourse Parsing
          10. Aspect based sentiment analysis
          11. Rv + Stance detection
+         12. Coherence momentum
 
          -------------- */
 
@@ -564,27 +565,35 @@ export default function () {
         }
       );
       // Rv + Stance detection
-      this.post(
-        "/api/rv-stance-detection/dual-bert/predict",
-        () => {
-          return new Response(
-            200,
-            {},
-            {
-              rumor_labels: "true rumour",
-              stance_labels: ["Deny", "Support", "Query", "Comment", "Support"],
-              text: [
-                "Is it true? Prince rumoured to be performing surprise show in Toronto",
-                "@LisaLaFlammeCTV hope not",
-                "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
-                "@LisaLaFlammeCTV Do you mean the artist formerly known as \"Strange Symbol\"?",
-                "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
-                "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",
-              ],
-            }
-          );
-        }
-      );
+      this.post("/api/rv-stance-detection/dual-bert/predict", () => {
+        return new Response(
+          200,
+          {},
+          {
+            rumor_labels: "true rumour",
+            stance_labels: ["Deny", "Support", "Query", "Comment", "Support"],
+            text: [
+              "Is it true? Prince rumoured to be performing surprise show in Toronto",
+              "@LisaLaFlammeCTV hope not",
+              "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
+              '@LisaLaFlammeCTV Do you mean the artist formerly known as "Strange Symbol"?',
+              "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
+              "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",
+            ],
+          }
+        );
+      });
+      // Coherence momentum
+      this.post("/api/coherence-modeling/coherence-momentum/predict", () => {
+        return new Response(
+          200,
+          {},
+          {
+            text1_score: 100,
+            text2_score: 50,
+          }
+        );
+      });
 
       /* =================
          SEACoreNLP Models
@@ -1460,12 +1469,12 @@ export default function () {
               "dengan",
               "sendok",
               "dan",
-              "garpu"
+              "garpu",
             ],
             verbs: [
               {
-                "description": "",
-                "tags": [
+                description: "",
+                tags: [
                   "U-ARG1",
                   "U-V",
                   "B-ARG4",
@@ -1479,13 +1488,13 @@ export default function () {
                   "O",
                   "O",
                   "O",
-                  "O"
+                  "O",
                 ],
-                "verb": "pergi"
+                verb: "pergi",
               },
               {
-                "description": "",
-                "tags": [
+                description: "",
+                tags: [
                   "O",
                   "O",
                   "O",
@@ -1499,11 +1508,11 @@ export default function () {
                   "B-ARGM-MNR",
                   "I-ARGM-MNR",
                   "I-ARGM-MNR",
-                  "L-ARGM-MNR"
+                  "L-ARGM-MNR",
                 ],
-                "verb": "makan"
-              }
-            ]
+                verb: "makan",
+              },
+            ],
           }
         );
       });
