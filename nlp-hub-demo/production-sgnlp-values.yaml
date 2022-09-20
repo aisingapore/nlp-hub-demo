@@ -124,3 +124,14 @@ models:
       requests:
         memory: "2.5Gi"
         cpu: "500m"
+  coherenceMomentum:
+    name: coherence-momentum
+    port: 8000
+    path: /api/coherence-modeling/coherence-momentum/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/sgnlp/coherence-momentum:latest
+    resources:
+      requests:
+        memory: "3Gi"
+        cpu: "500m"

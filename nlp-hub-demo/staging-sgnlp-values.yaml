@@ -135,3 +135,14 @@ models:
       requests:
         memory: "10Gi"
         cpu: "500m"
+  coherenceMomentum:
+    name: coherence-momentum
+    port: 8000
+    path: /api/coherence-modeling/coherence-momentum/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: registry.aisingapore.net/sg-nlp/coherence-momentum:latest
+    resources:
+      requests:
+        memory: "3Gi"
+        cpu: "500m"
