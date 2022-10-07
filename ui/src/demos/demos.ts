@@ -65,7 +65,7 @@ const sgnlpSocialMediaAnalysisDemos = [
   RumourDetectionDemo,
   // RvStanceDetectionDemo,
 ];
-const sgnlpDiscourseParsingDemos = [DiscourseParsingDemo];
+const sgnlpDocumentAnalysisDemos = [DiscourseParsingDemo,CoherenceModelingDemo];
 const sgnlpSentimentAnalysisDemos = [
   AspectBasedSentimentAnalysisDemo,
   CrossLingualCrossDomainDemo,
@@ -95,7 +95,7 @@ export const sgnlpGroups: DemoGroup[] = [
   {
     label: "Document Analysis",
     icon: ReadOutlined,
-    demos: sgnlpDiscourseParsingDemos,
+    demos: sgnlpDocumentAnalysisDemos,
   },
   {
     label: "Sentiment Analysis",
@@ -106,7 +106,7 @@ export const sgnlpGroups: DemoGroup[] = [
 
 const sgnlpNestedDemos = sgnlpGroups.map((group) => group["demos"]);
 const sgnlpDemos = [].concat.apply([], sgnlpNestedDemos);
-const sgnlpBetaDemos: Demo[] = [CoherenceModelingDemo];
+const sgnlpBetaDemos: Demo[] = [];
 
 const seaSegmentationDemos = [TokenizerDemo];
 const seaTaggingDemos = [POSTaggerDemo, NERTaggerDemo];
