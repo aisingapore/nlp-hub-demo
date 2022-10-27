@@ -75,7 +75,7 @@ const SEACoreNLPNotice = () => (
       Do you have ideas on improving the model? Or questions about how the model
       works? Visit our{" "}
       <a
-        href="https://community.aisingapore.org/groups/natural-language-processing/forum/"
+        href="https://epoch.aisingapore.org/community/seacore-nlp/"
         target="_blank"
         rel="noopener"
       >
@@ -110,7 +110,7 @@ const SGNLPNotice = () => (
       Do you have ideas on improving the model? Or questions about how the model
       works? Visit our{" "}
       <a
-        href="https://community.aisingapore.org/groups/natural-language-processing/forum/"
+        href="https://epoch.aisingapore.org/community/sg-nlp/"
         target="_blank"
         rel="noopener"
       >
