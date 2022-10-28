@@ -98,6 +98,8 @@ deploy_production_sgnlp:
 
 deploy_production_seacorenlp:
   stage: deploy_production
+  tags:
+    - on-prem
   needs: ["build_production_seacorenlp"]
   when: manual
   only:
