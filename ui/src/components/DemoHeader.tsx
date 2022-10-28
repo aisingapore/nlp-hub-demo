@@ -108,6 +108,11 @@ const Banner = {
   SEACORENLP: SeacorenlpBanner,
 }[CONTENT_TYPE];
 
+const ForumLink = {
+  SGNLP: "https://epoch.aisingapore.org/community/sg-nlp/",
+  SEACORENLP: "https://epoch.aisingapore.org/community/seacore-nlp/"
+}[CONTENT_TYPE];
+
 const dropdownMenu = (
   <Menu>
     <Menu.Item key="0">
@@ -117,7 +122,7 @@ const dropdownMenu = (
     </Menu.Item>
     <Menu.Item key="1">
       <a
-        href="https://community.aisingapore.org/groups/natural-language-processing/forum/"
+        href={ForumLink}
         target="_blank"
         rel="noopener"
       >
