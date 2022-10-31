@@ -7,6 +7,11 @@ import Pane from "../components/Pane";
 
 const { Panel } = Collapse;
 
+const ForumLink = {
+  SGNLP: "https://epoch.aisingapore.org/community/sg-nlp/",
+  SEACORENLP: "https://epoch.aisingapore.org/community/seacore-nlp/"
+}[CONTENT_TYPE];
+
 const content = [
   {
     header: "Fork the SGnlp repository",
@@ -189,7 +194,7 @@ const content = [
         . For all inquiries, please email us at sg-nlp@aisingapore.org or post a
         discussion at our{" "}
         <a
-          href="https://community.aisingapore.org/groups/natural-language-processing/forum/natural-language-processing/"
+          href={ForumLink}
           target="_blank"
           rel="noopener"
         >
