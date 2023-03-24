@@ -66,3 +66,25 @@ models:
       requests:
         memory: "4Gi"
         cpu: "700m"
+  seaCorefResolver:
+    name: sea-coref-resolver
+    port: 8080
+    path: /api/sea-coref-resolver/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/seacorenlp/coref-resolver:latest
+    resources:
+      requests:
+        memory: "8Gi"
+        cpu: "700m"
+  seaSRLParser:
+    name: sea-srl-parser
+    port: 8080
+    path: /api/sea-srl-parser/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: asia.gcr.io/infra-public-hosting/seacorenlp/srl-parser:latest
+    resources:
+      requests:
+        memory: "4Gi"
+        cpu: "700m"
