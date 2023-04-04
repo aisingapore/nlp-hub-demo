@@ -26,6 +26,8 @@ import IdentifyFollowUpQuestionDemo from "./sg-nlp/identify-follow-up-question/I
 import AspectBasedSentimentAnalysisDemo from "./sg-nlp/aspect-based-sentiment-analysis/AspectBasedSentimentAnalysisDemo";
 import RvStanceDetectionDemo from "./sg-nlp/rv-stance-detection/RvStanceDetectionDemo";
 import CoherenceModelingDemo from "./sg-nlp/coherence-modeling/CoherenceModelingDemo";
+import StanceClassificationDemo from "./sg-nlp/stance-classification/StanceClassificationDemo";
+import RumourVerificationDemo from "./sg-nlp/rumour-verification/RumourVerificationDemo";
 
 // SEACoreNLP Demos
 import TokenizerDemo from "./seacorenlp/tokenizer/TokenizerDemo";
@@ -64,8 +66,10 @@ const sgnlpKnowledgeMiningDemos = [RelationExtractionDemo];
 const sgnlpSocialMediaAnalysisDemos = [
   RumourDetectionDemo,
   // RvStanceDetectionDemo,
+  StanceClassificationDemo,
+  RumourVerificationDemo,
 ];
-const sgnlpDocumentAnalysisDemos = [DiscourseParsingDemo,CoherenceModelingDemo];
+const sgnlpDocumentAnalysisDemos = [DiscourseParsingDemo, CoherenceModelingDemo];
 const sgnlpSentimentAnalysisDemos = [
   AspectBasedSentimentAnalysisDemo,
   CrossLingualCrossDomainDemo,
