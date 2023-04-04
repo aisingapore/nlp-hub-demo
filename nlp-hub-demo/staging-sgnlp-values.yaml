@@ -146,3 +146,25 @@ models:
       requests:
         memory: "3Gi"
         cpu: "500m"
+  stanceClassification:
+    name: stance-classification
+    port: 8000
+    path: /api/stance-classification/stance-classification/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: registry.aisingapore.net/sg-nlp/stance-classification:latest
+    resources:
+      requests:
+        memory: "10Gi"
+        cpu: "500m"
+  rumourVerification:
+    name: rumour-verification
+    port: 8000
+    path: /api/rumour-verification/rumour-verification/(.*)
+    rewriteTarget: /$1
+    replicas: 1
+    image: registry.aisingapore.net/sg-nlp/rumour-verification:latest
+    resources:
+      requests:
+        memory: "10Gi"
+        cpu: "500m"

@@ -19,6 +19,8 @@ export default function () {
          10. Aspect based sentiment analysis
          11. Rv + Stance detection
          12. Coherence momentum
+         13. Stance classification
+         14. Rumour verification
 
          -------------- */
 
@@ -594,7 +596,32 @@ export default function () {
           }
         );
       });
-
+      // Stance classification
+      this.post("/api/stance-classification/stance-classification/predict", () => {
+        return new Response(
+          200,
+          {},
+          {
+            tweets: [
+              "Prince rumoured to be performing surprise show in Toronto",
+              "@LisaLaFlammeCTV hope not",
+              "@LisaLaFlammeCTV yep, don't as me how I know, but yep",
+              '@LisaLaFlammeCTV Do you mean the artist formerly known as "Strange Symbol"?',
+              "@LisaLaFlammeCTV @CTVToronto a suprise concert on Vancouver would be cool #cmonprince",
+              "@LisaLaFlammeCTV I am in a line up. It is going down Victoria Street to Queen.",
+            ],
+            preds: ["SUPPORT", "DENY", "SUPPORT", "QUERY", "COMMENT", "SUPPORT"],
+          }
+        );
+      });
+      // Rumour verification
+      this.post("/api/rumour-verification/rumour-verification/predict", () => {
+        return new Response(
+          200,
+          {},
+          { pred: "TRUE" }
+        );
+      });
       /* =================
          SEACoreNLP Models
          =================
